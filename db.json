@@ -1,81 +1,666 @@
 {
-  "transactions": [
+  "users": [
     {
-      "id": "1",
+      "id": 1,
+      "name": "Alice Smith",
+      "email": "alice.smith@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Bob Johnson",
+      "email": "bob.johnson@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Carol Williams",
+      "email": "carol.williams@example.com"
+    },
+    {
+      "id": 4,
+      "name": "David Brown",
+      "email": "david.brown@example.com"
+    },
+    {
+      "id": 5,
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com"
+    },
+    {
+      "id": 6,
+      "name": "Frank Miller",
+      "email": "frank.miller@example.com"
+    },
+    {
+      "id": 7,
+      "name": "Grace Wilson",
+      "email": "grace.wilson@example.com"
+    },
+    {
+      "id": 8,
+      "name": "Hank Moore",
+      "email": "hank.moore@example.com"
+    }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "name": "Push-Up",
+      "type": "Strength",
+      "duration": "30 seconds",
+      "calories_burned": 50
+    },
+    {
+      "id": 2,
+      "name": "Running",
+      "type": "Cardio",
+      "duration": "30 minutes",
+      "calories_burned": 300
+    },
+    {
+      "id": 3,
+      "name": "Squat",
+      "type": "Strength",
+      "duration": "30 seconds",
+      "calories_burned": 70
+    },
+    {
+      "id": 4,
+      "name": "Cycling",
+      "type": "Cardio",
+      "duration": "45 minutes",
+      "calories_burned": 400
+    },
+    {
+      "id": 5,
+      "name": "Plank",
+      "type": "Core",
+      "duration": "60 seconds",
+      "calories_burned": 40
+    },
+    {
+      "id": 6,
+      "name": "Jump Rope",
+      "type": "Cardio",
+      "duration": "20 minutes",
+      "calories_burned": 200
+    },
+    {
+      "id": 7,
+      "name": "Lunges",
+      "type": "Strength",
+      "duration": "30 seconds",
+      "calories_burned": 60
+    },
+    {
+      "id": 8,
+      "name": "Burpees",
+      "type": "HIIT",
+      "duration": "20 seconds",
+      "calories_burned": 80
+    }
+  ],
+  "workouts": [
+    {
+      "id": 1,
+      "userId": 3,
+      "name": "Morning Cardio",
+      "exercises": ["Running", "Jump Rope"],
+      "duration": "50 minutes",
+      "calories_burned": 500
+    },
+    {
+      "id": 2,
+      "userId": 5,
+      "name": "Strength Training",
+      "exercises": ["Push-Up", "Squat", "Lunges"],
+      "duration": "40 minutes",
+      "calories_burned": 250
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "HIIT Workout",
+      "exercises": ["Burpees", "Jump Rope", "Plank"],
+      "duration": "30 minutes",
+      "calories_burned": 350
+    },
+    {
+      "id": 4,
+      "userId": 7,
+      "name": "Evening Relaxation",
+      "exercises": ["Cycling", "Plank"],
+      "duration": "60 minutes",
+      "calories_burned": 300
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "name": "Full Body Workout",
+      "exercises": ["Push-Up", "Squat", "Burpees"],
+      "duration": "45 minutes",
+      "calories_burned": 400
+    },
+    {
+      "id": 6,
+      "userId": 6,
+      "name": "Cardio Blast",
+      "exercises": ["Running", "Jump Rope"],
+      "duration": "45 minutes",
+      "calories_burned": 450
+    },
+    {
+      "id": 7,
+      "userId": 8,
+      "name": "Core Strength",
+      "exercises": ["Plank", "Burpees"],
+      "duration": "30 minutes",
+      "calories_burned": 200
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "name": "Leg Day",
+      "exercises": ["Squat", "Lunges"],
+      "duration": "35 minutes",
+      "calories_burned": 220
+    }
+  ],
+  "nutrition": [
+    {
+      "id": 1,
+      "userId": 6,
+      "name": "High Protein Breakfast",
+      "calories": 500,
+      "protein": 30,
+      "carbs": 60,
+      "fat": 15
+    },
+    {
+      "id": 2,
+      "userId": 7,
+      "name": "Green Smoothie",
+      "calories": 250,
+      "protein": 10,
+      "carbs": 50,
+      "fat": 5
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "name": "Chicken Salad",
+      "calories": 400,
+      "protein": 35,
+      "carbs": 20,
+      "fat": 10
+    },
+    {
+      "id": 4,
+      "userId": 8,
+      "name": "Energy Bar",
+      "calories": 200,
+      "protein": 15,
+      "carbs": 30,
+      "fat": 8
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "name": "Quinoa Bowl",
+      "calories": 350,
+      "protein": 15,
+      "carbs": 60,
+      "fat": 8
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "name": "Greek Yogurt",
+      "calories": 150,
+      "protein": 12,
+      "carbs": 20,
+      "fat": 2
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "name": "Turkey Wrap",
+      "calories": 350,
+      "protein": 25,
+      "carbs": 40,
+      "fat": 10
+    },
+    {
+      "id": 8,
+      "userId": 5,
+      "name": "Veggie Stir Fry",
+      "calories": 300,
+      "protein": 12,
+      "carbs": 40,
+      "fat": 10
+    }
+  ],
+  "progress": [
+    {
+      "id": 1,
+      "userId": 5,
       "date": "2024-08-01",
-      "description": "Grocery Shopping at Trader Joe's",
-      "category": "Groceries",
-      "amount": -120.5
+      "weight": 70,
+      "body_fat": 15,
+      "muscle_mass": 55
     },
     {
-      "id": "2",
-      "date": "2024-08-02",
-      "description": "Spotify Subscription",
-      "category": "Entertainment",
-      "amount": -9.99
+      "id": 2,
+      "userId": 8,
+      "date": "2024-08-08",
+      "weight": 68,
+      "body_fat": 14,
+      "muscle_mass": 56
     },
     {
-      "id": "3",
-      "date": "2024-08-03",
-      "description": "Freelance Payment",
-      "category": "Income",
-      "amount": 1500
+      "id": 3,
+      "userId": 3,
+      "date": "2024-08-15",
+      "weight": 67,
+      "body_fat": 13,
+      "muscle_mass": 57
     },
     {
-      "id": "4",
-      "date": "2024-08-04",
-      "description": "Lunch at Subway",
-      "category": "Food",
-      "amount": -12.75
+      "id": 4,
+      "userId": 1,
+      "date": "2024-08-22",
+      "weight": 66,
+      "body_fat": 13,
+      "muscle_mass": 58
     },
     {
-      "id": "5",
-      "date": "2024-08-05",
-      "description": "Amazon Purchase - Books",
-      "category": "Shopping",
-      "amount": -45
+      "id": 5,
+      "userId": 6,
+      "date": "2024-08-29",
+      "weight": 65,
+      "body_fat": 12,
+      "muscle_mass": 59
     },
     {
-      "id": "6",
-      "date": "2024-08-06",
-      "description": "Monthly Gym Membership",
-      "category": "Health",
-      "amount": -50
+      "id": 6,
+      "userId": 2,
+      "date": "2024-09-05",
+      "weight": 64,
+      "body_fat": 12,
+      "muscle_mass": 60
     },
     {
-      "id": "7",
-      "date": "2024-08-07",
-      "description": "Taxi Fare",
-      "category": "Transportation",
-      "amount": 45
+      "id": 7,
+      "userId": 7,
+      "date": "2024-09-12",
+      "weight": 63,
+      "body_fat": 11,
+      "muscle_mass": 61
     },
     {
-      "id": "8",
-      "date": "2024-08-07",
-      "description": "Electricity Bill",
-      "category": "Utilities",
-      "amount": -85.3
+      "id": 8,
+      "userId": 4,
+      "date": "2024-09-19",
+      "weight": 62,
+      "body_fat": 11,
+      "muscle_mass": 62
+    }
+  ],
+  "exercise_logs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "date": "2024-08-01",
+      "exercise": "Push-Up",
+      "reps": 15,
+      "sets": 3
     },
     {
-      "id": "9",
-      "date": "2024-08-11",
-      "description": "Taxi Fare",
-      "category": "Transportation",
-      "amount": 45
+      "id": 2,
+      "userId": 2,
+      "date": "2024-08-08",
+      "exercise": "Running",
+      "duration": "30 minutes",
+      "distance": "5 km"
     },
     {
-      "id": 10,
-      "date": "2024-08-11",
-      "description": "hospital bill",
-      "category": "health",
-      "amount": 500
+      "id": 3,
+      "userId": 3,
+      "date": "2024-08-15",
+      "exercise": "Squat",
+      "reps": 20,
+      "sets": 3
     },
     {
-      "id": 11,
-      "date": "2024-08-11",
-      "description": "school fees",
-      "category": "education",
-      "amount": 1000
+      "id": 4,
+      "userId": 4,
+      "date": "2024-08-22",
+      "exercise": "Cycling",
+      "duration": "45 minutes",
+      "distance": "15 km"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "date": "2024-08-29",
+      "exercise": "Plank",
+      "duration": "60 seconds"
+    },
+    {
+      "id": 6,
+      "userId": 6,
+      "date": "2024-09-05",
+      "exercise": "Jump Rope",
+      "duration": "20 minutes"
+    },
+    {
+      "id": 7,
+      "userId": 7,
+      "date": "2024-09-12",
+      "exercise": "Lunges",
+      "reps": 20,
+      "sets": 3
+    },
+    {
+      "id": 8,
+      "userId": 8,
+      "date": "2024-09-19",
+      "exercise": "Burpees",
+      "reps": 10,
+      "sets": 3
+    }
+  ],
+  "workout_plans": [
+    {
+      "id": 1,
+      "userId": 3,
+      "name": "Beginner's Cardio",
+      "duration": "4 weeks",
+      "goal": "Improve cardiovascular health",
+      "exercises": ["Running", "Jump Rope"]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Full Body Strength",
+      "duration": "6 weeks",
+      "goal": "Build muscle mass",
+      "exercises": ["Push-Up", "Squat", "Burpees"]
+    },
+    {
+      "id": 3,
+      "userId": 6,
+      "name": "Endurance Boost",
+      "duration": "8 weeks",
+      "goal": "Increase stamina",
+      "exercises": ["Cycling", "Running"]
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "name": "Core Focus",
+      "duration": "4 weeks",
+      "goal": "Strengthen core muscles",
+      "exercises": ["Plank", "Lunges"]
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "name": "HIIT Challenge",
+      "duration": "6 weeks",
+      "goal": "Burn fat quickly",
+      "exercises": ["Burpees", "Jump Rope"]
+    },
+    {
+      "id": 6,
+      "userId": 8,
+      "name": "Leg Day Mastery",
+      "duration": "8 weeks",
+      "goal": "Build leg strength",
+      "exercises": ["Squat", "Lunges"]
+    },
+    {
+      "id": 7,
+      "userId": 7,
+      "name": "Cardio Kickstart",
+      "duration": "4 weeks",
+      "goal": "Boost cardiovascular fitness",
+      "exercises": ["Running", "Cycling"]
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "name": "Strength and Tone",
+      "duration": "6 weeks",
+      "goal": "Tone muscles and build strength",
+      "exercises": ["Push-Up", "Plank"]
+    }
+  ],
+  "meal_plans": [
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "Weight Loss Plan",
+      "duration": "4 weeks",
+      "goal": "Lose weight",
+      "meals": ["Green Smoothie", "Quinoa Bowl"]
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "name": "Muscle Gain Plan",
+      "duration": "6 weeks",
+      "goal": "Build muscle",
+      "meals": ["Chicken Salad", "High Protein Breakfast"]
+    },
+    {
+      "id": 3,
+      "userId": 5,
+      "name": "Balanced Diet",
+      "duration": "8 weeks",
+      "goal": "Maintain overall health",
+      "meals": ["Veggie Stir Fry", "Energy Bar"]
+    },
+    {
+      "id": 4,
+      "userId": 7,
+      "name": "Low Carb Plan",
+      "duration": "4 weeks",
+      "goal": "Reduce carbohydrate intake",
+      "meals": ["Turkey Wrap", "Greek Yogurt"]
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "name": "Vegan Diet",
+      "duration": "6 weeks",
+      "goal": "Follow a plant-based diet",
+      "meals": ["Quinoa Bowl", "Green Smoothie"]
+    },
+    {
+      "id": 6,
+      "userId": 8,
+      "name": "Mediterranean Diet",
+      "duration": "8 weeks",
+      "goal": "Improve heart health",
+      "meals": ["Greek Yogurt", "Chicken Salad"]
+    },
+    {
+      "id": 7,
+      "userId": 6,
+      "name": "High Protein Diet",
+      "duration": "4 weeks",
+      "goal": "Increase protein intake",
+      "meals": ["High Protein Breakfast", "Turkey Wrap"]
+    },
+    {
+      "id": 8,
+      "userId": 3,
+      "name": "Detox Plan",
+      "duration": "4 weeks",
+      "goal": "Detoxify the body",
+      "meals": ["Green Smoothie", "Energy Bar"]
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "userId": 1,
+      "description": "Lose 10 pounds",
+      "target_date": "2024-12-31",
+      "progress": "5 pounds"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "description": "Run a 5K",
+      "target_date": "2024-11-15",
+      "progress": "3K"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "description": "Increase bench press weight by 20 pounds",
+      "target_date": "2024-10-31",
+      "progress": "10 pounds"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "description": "Reduce body fat by 5%",
+      "target_date": "2024-12-15",
+      "progress": "2%"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "description": "Complete a 30-day yoga challenge",
+      "target_date": "2024-09-30",
+      "progress": "15 days"
+    },
+    {
+      "id": 6,
+      "userId": 6,
+      "description": "Cycle 100 miles in a month",
+      "target_date": "2024-11-01",
+      "progress": "50 miles"
+    },
+    {
+      "id": 7,
+      "userId": 7,
+      "description": "Increase flexibility",
+      "target_date": "2024-10-15",
+      "progress": "50%"
+    },
+    {
+      "id": 8,
+      "userId": 8,
+      "description": "Improve sleep quality",
+      "target_date": "2024-12-01",
+      "progress": "Good"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "userId": 3,
+      "name": "First 5K Run",
+      "date": "2024-08-01"
+    },
+    {
+      "id": 2,
+      "userId": 5,
+      "name": "10 Pounds Lost",
+      "date": "2024-07-15"
+    },
+    {
+      "id": 3,
+      "userId": 7,
+      "name": "First Muscle-Up",
+      "date": "2024-06-30"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "name": "Half Marathon Completed",
+      "date": "2024-05-22"
+    },
+    {
+      "id": 5,
+      "userId": 6,
+      "name": "50 Push-Ups in a Row",
+      "date": "2024-07-04"
+    },
+    {
+      "id": 6,
+      "userId": 8,
+      "name": "20 Days of Healthy Eating",
+      "date": "2024-04-10"
+    },
+    {
+      "id": 7,
+      "userId": 2,
+      "name": "First Pull-Up",
+      "date": "2024-03-28"
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "name": "Personal Best in Squat",
+      "date": "2024-08-10"
+    }
+  ],
+  "weight_loss_charts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      "datasets": [
+        {
+          "label": "Weight Progress",
+          "data": [65, 64, 63, 62, 61, 60],
+          "borderColor": "rgba(75, 192, 192, 1)",
+          "backgroundColor": "rgba(75, 192, 192, 0.2)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      "datasets": [
+        {
+          "label": "Weight Progress",
+          "data": [85, 84, 83, 82, 81, 80],
+          "borderColor": "rgba(255, 99, 132, 1)",
+          "backgroundColor": "rgba(255, 99, 132, 0.2)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      "datasets": [
+        {
+          "label": "Weight Progress",
+          "data": [75, 74, 73, 72, 71, 70],
+          "borderColor": "rgba(54, 162, 235, 1)",
+          "backgroundColor": "rgba(54, 162, 235, 0.2)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      "datasets": [
+        {
+          "label": "Weight Progress",
+          "data": [95, 94, 93, 92, 91, 90],
+          "borderColor": "rgba(153, 102, 255, 1)",
+          "backgroundColor": "rgba(153, 102, 255, 0.2)"
+        }
+      ]
     }
   ]
 }
